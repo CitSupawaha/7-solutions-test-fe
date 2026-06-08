@@ -1,0 +1,95 @@
+/* =========================================
+   Layout: 3-column board
+   ========================================= */
+
+.app {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.board {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* =========================================
+   Main List (left column — no header)
+   ========================================= */
+
+.main-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+  flex: 1;
+}
+
+/* =========================================
+   Type Column (Fruit / Vegetable)
+   ========================================= */
+
+.type-column {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid #ddd;
+  min-height: 400px;
+}
+
+.type-column__header {
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.type-column__items {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+}
+
+/* =========================================
+   Item Button
+   ========================================= */
+
+.item-btn {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.item-btn:hover {
+  background: #f0f0f0;
+}
+
+.item-btn:active {
+  background: #e5e5e5;
+}
+
+/* Removed tight-stacking border overrides so buttons look like distinct items */
+
+/* =========================================
+   Responsive
+   ========================================= */
+
+@media (max-width: 600px) {
+  .board {
+    flex-direction: column;
+  }
+
+  .main-list,
+  .type-column {
+    min-width: 100%;
+  }
+}
